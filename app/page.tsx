@@ -1,26 +1,21 @@
-import PageHeder from "@/src/components/ui/PageHeader";
+import Link from 'next/link';
 
-export default function Home() {
+export default function NavBar() {
   return (
-    <div>
-      <div>
-       <div style={{ width: '400px'}}> <h2> Pratik Choudhari</h2></div>
-       <div style={{ width: '300px'}}>
-       <PageHeder />
-        </div> 
+    <nav className="bg-gray-800 p-4">
+      <div className="container mx-auto flex justify-between">
+        <div className="text-white flex space-x-4">
+          <Link href="/">
+            <p className="px-4 py-2 hover:bg-gray-700 rounded">Home</p>
+          </Link>
+          <Link href="/about">
+            <p className="px-4 py-2 hover:bg-gray-700 rounded">About</p>
+          </Link>
+          <Link href="/contact">
+            <p className="px-4 py-2 hover:bg-gray-700 rounded">Contact</p>
+          </Link>
+        </div>
       </div>
-
-      <div>
-        <h2> Pratik Choudhari</h2>
-      </div>
-
-      <div>
-        <h2> Pratik Choudhari</h2>
-      </div>
-
-      <div>
-        <h2> Pratik Choudhari</h2>
-      </div>
-    </div>
+    </nav>
   );
 }
