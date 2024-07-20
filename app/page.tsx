@@ -29,12 +29,19 @@ export default function NavBar() {
         </div>
       </nav>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
-        <div className="flex flex-col justify-center ">
-          <div>{`<h1>`}</div>
-          <div>
-            <p>Hi,</p>
-            <p>I'm Pratik Choudhari</p>
-          </div>
+        <div className="flex flex-col ">
+          <div>{`<h2>`}</div>
+            <div>Hi,</div>
+            <div>I'm Pratik Choudhari</div>
+            <div>{`I Tell Stories Through <code/>`}</div>
+            <div>{`</h2>`}</div>
+            <div>{`<p>`}</div>
+            <div><p>As a Software Developer with over 3.4 years of industry experience, I specialize in creating innovative solutions on various platforms.</p> 
+              <p>My passion for technology and engineering drives me to constantly explore and implement cutting-edge developments in the field.</p></div>
+            <div>{`</p>`}</div>
+            <div>
+              <a href="https://drive.google.com/uc?export=download&id=1lpPDp5gw6vWzIwi8kmEhczjQ-z5JxWH0" >Resume</a>
+            </div>
         </div>
         <div className="flex items-center justify-center">
           <Images />
