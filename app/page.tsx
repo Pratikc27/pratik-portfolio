@@ -3,8 +3,8 @@ import Images from '../assets/svg/test.svg';
 
 export default function NavBar() {
   return (
-    <div className="bg-slate-700">
-      <nav className="p-4">
+    <div className="bg-slate-700 text-white">
+      <nav className="p-8">
         <div className="container mx-auto flex justify-between">
           <div className='text-orange-500 text-4xl'>
             <h1>{`<Pratik Choudhari />`}</h1>
@@ -28,14 +28,13 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
-        <div className="flex flex-col ">
-          <div>{`<h2>`}</div>
-            <div>Hi,</div>
-            <div>I'm Pratik Choudhari</div>
-            <div>{`I Tell Stories Through <code/>`}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
+        <div className="flex flex-col text-xl">
+          <div><h2>{`<h2>`}</h2></div>
+            <div className='text-3xl'>Hi, I'm <span className='text-orange-500'>Pratik Choudhari</span></div>
+            <div className='text-3xl'>{`I Tell Stories Through <code/>`}</div>
             <div>{`</h2>`}</div>
-            <div>{`<p>`}</div>
+            <div><br></br>{`<p>`}</div>
             <div><p>As a Software Developer with over 3.4 years of industry experience, I specialize in creating innovative solutions on various platforms.</p> 
               <p>My passion for technology and engineering drives me to constantly explore and implement cutting-edge developments in the field.</p></div>
             <div>{`</p>`}</div>
