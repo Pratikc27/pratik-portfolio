@@ -75,6 +75,7 @@ export default function NavBar() {
       <div className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-24">
         <span>My Journey</span>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
         <div className="flex items-center justify-center">
           <Images />
@@ -117,6 +118,64 @@ export default function NavBar() {
           </span>
         </div>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
+        <div>
+          <p className="text-4xl">Where I've Worked</p>
+        </div>
+
+        <div className="mt-4">
+          <p className="text-xl">
+            <span>MERN-Stack Developer</span>
+            <a href="https://www.truscholar.io/" alt="" target="_blank">
+              <span className="text-green-300">{"    "}@TruScholar</span>
+            </a>
+          </p>
+          <p className="text-xs">June, 2023 - Present</p>
+
+          <ul className="list-disc list-inside">
+            <li className="mt-2">
+              I have acquired industry experience by actively engaging in React
+              and Node.js coding, effectively enhancing the platform's
+              functionality. I've successfully rectified multiple bugs,
+              contributing to a smoother operation of the platform.
+            </li>
+            <li>
+              Developed and maintained both front-end and back-end components of
+              web applications.
+            </li>
+            <li>
+              Collaborated with cross-functional teams to design and implement
+              new features.
+            </li>
+            <li>
+              Troubleshot and fixed bugs to ensure smooth platform operation.
+            </li>
+            <li>
+              Optimized application performance for better efficiency and user
+              experience.
+            </li>
+            <li>Ensured scalability and security of web applications.</li>
+            <li>
+              Worked closely with UX/UI designers to deliver an exceptional user
+              experience.
+            </li>
+            <li>
+              To enhance performance, I'm implementing pagination on tables to
+              minimize loading times and optimize user experience.
+            </li>
+            <li>
+              Setting up Redux Toolkit in a real-time project is a smart move
+              for managing state efficiently.
+            </li>
+            <li>
+              Conducted white box testing and used Postman for API testing.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      
     </div>
   );
 }
