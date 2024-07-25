@@ -10,25 +10,25 @@ export default function NavBar() {
             <h1>{`<Pratik Choudhari />`}</h1>
           </div>
           <div className="text-white flex">
-            <Link href="/">
+            <Link href="#home">
               <p className="px-4 py-2 hover:bg-gray-700 rounded">Home</p>
             </Link>
-            <Link href="/about">
+            <Link href="#about">
               <p className="px-4 py-2 hover:bg-gray-700 rounded">About</p>
             </Link>
-            <Link href="/experience">
+            <Link href="#experience">
               <p className="px-4 py-2 hover:bg-gray-700 rounded">Experience</p>
             </Link>
-            <Link href="/project">
+            <Link href="#project">
               <p className="px-4 py-2 hover:bg-gray-700 rounded">Projects</p>
             </Link>
-            <Link href="/contact">
+            <Link href="#contact">
               <p className="px-4 py-2 hover:bg-gray-700 rounded">Contact</p>
             </Link>
           </div>
         </div>
       </nav>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
+      <div id="home" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
         <div className="flex flex-col text-lg">
           <div className="py-4">{`<h2>`}</div>
           <div className="text-3xl">
@@ -72,7 +72,7 @@ export default function NavBar() {
           <Images />
         </div>
       </div>
-      <div className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-24">
+      <div id="about" className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-24">
         <span>My Journey</span>
       </div>
 
@@ -119,9 +119,9 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
+      <div id="experience" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
         <div>
-          <p className="text-4xl">Where I've Worked</p>
+          <p className="text-3xl">Where I've Worked</p>
         </div>
 
         <div className="mt-4">
@@ -176,6 +176,27 @@ export default function NavBar() {
 
       </div>
       
+      <div id="project" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
+        <div>
+          <p className="text-3xl">Some of My Personal Projects</p>
+        </div>
+
+        <div className="mt-4">
+         
+        </div>
+
+        </div>
+
+        <div id="contact" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
+        <div>
+          <p className="text-3xl">Contact Me</p>
+        </div>
+
+        <div className="mt-4">
+         <p></p>
+        </div>
+
+      </div>
     </div>
   );
 }
