@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link";
 import Images from "../assets/svg/test.svg";
+import Project1 from "../assets/svg/portfolio.svg";
 
 export default function NavBar() {
   return (
@@ -28,7 +31,7 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-      <div id="home" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
+      <div id="home" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24">
         <div className="flex flex-col text-lg">
           <div className="py-4">{`<h2>`}</div>
           <div className="text-3xl">
@@ -181,9 +184,14 @@ export default function NavBar() {
           <p className="text-3xl">Some of My Personal Projects</p>
         </div>
 
-        <div className="mt-4">
-         
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
+        <div className="flex items-center justify-center object-contain h-[400px] w-[800px]">
+          <Project1 className="h-full w-full " />
         </div>
+        <div className="flex flex-col text-lg">
+          <h1>Hiiiiiiiiiiiiiiii</h1>
+        </div>
+      </div>
 
         </div>
 
