@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link";
-import Images from "../assets/svg/test.svg";
-import Project1 from "../assets/svg/portfolio.svg";
+import Images from "../public/assets/svg/test.svg";
+// import Project1 from "../assets/png/portfolio.png";
 
 export default function NavBar() {
   return (
@@ -184,12 +184,14 @@ export default function NavBar() {
           <p className="text-3xl">Some of My Personal Projects</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
-        <div className="flex items-center justify-center object-contain h-[400px] w-[800px]">
-          <Project1 className="h-full w-full " />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12 py-10">
+        <div className="items-center justify-center h-[200px] w-[450px]">
+          <img src="assets/png/portfolio.png"  className="h-full w-full " alt="frame" />
         </div>
         <div className="flex flex-col text-lg">
-          <h1>Hiiiiiiiiiiiiiiii</h1>
+          <p className="text-2xl text-green-300">Portfolio Website</p>
+          <p className="text-xs py-1"><h6>Nextjs + Tailwindcss</h6></p>
+          <p className="text-sm py-1">A simple portfolio website built using Angular and hosted on the internet using Firebase. The font, colours and overall design took me 3 design iterations and almost a month to finalize which was more than the actual time I took to fully develop and deploy it.</p>
         </div>
       </div>
 
