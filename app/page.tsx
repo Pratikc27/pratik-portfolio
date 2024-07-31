@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link";
-import Images from "../public/assets/svg/test.svg";
-// import Project1 from "../assets/png/portfolio.png";
+import Images from "../public/assets/svg/men.svg";
+import Images1 from "../public/assets/svg/men1.svg";
 
 export default function NavBar() {
   return (
@@ -31,7 +31,7 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-      <div id="home" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24">
+      <div id="home" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 mt-8">
         <div className="flex flex-col text-lg">
           <div className="py-4">{`<h2>`}</div>
           <div className="text-3xl">
@@ -39,7 +39,7 @@ export default function NavBar() {
           </div>
           <div className="text-3xl">{`I Tell Stories Through <code/>`}</div>
           <div className="py-4">{`</h2>`}</div>
-          <div className="py-2">
+          <div className="">
             <br></br>
             {`<p>`}
           </div>
@@ -71,17 +71,17 @@ export default function NavBar() {
             </a>
           </div>
         </div>
-        <div className="flex items-center justify-center">
-          <Images />
+        <div className="flex items-center justify-center h-[450px] w-[650px]">
+          <img src="/assets/svg/men.svg" className="h-full w-full"/>
         </div>
       </div>
-      <div id="about" className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-24">
+      <div id="about" className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-24 mt-16">
         <span>My Journey</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
         <div className="flex items-center justify-center">
-          <Images />
+          <Images1 />
         </div>
         <div className="flex flex-col text-lg">
           <span>
@@ -190,7 +190,7 @@ export default function NavBar() {
         </div>
         <div className="flex flex-col text-lg">
           <p className="text-2xl text-green-300">Portfolio Website</p>
-          <p className="text-xs py-1"><h6>Nextjs + Tailwindcss</h6></p>
+          <p className="text-xs py-1">Nextjs + Tailwindcss</p>
           <p className="text-sm py-1">A simple portfolio website built using Angular and hosted on the internet using Firebase. The font, colours and overall design took me 3 design iterations and almost a month to finalize which was more than the actual time I took to fully develop and deploy it.</p>
         </div>
       </div>
@@ -200,6 +200,14 @@ export default function NavBar() {
         <div id="contact" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
         <div>
           <p className="text-3xl">Contact Me</p>
+        </div>
+        <div>
+          <p>Primary</p>
+          <a href="mailto:pratikchoudharij@gmail.com"><img src="/assets/png/mailicon.png" /></a>
+        </div>
+        <div>
+          <p>Social</p>
+          <a href="https://www.linkedin.com/in/pratik-choudhari-073412295/" target="_blank"><img src="/assets/svg/linkedin.svg" /></a>
         </div>
 
         <div className="mt-4">
