@@ -187,7 +187,7 @@ export default function NavBar() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12 py-10">
         <div className="items-center justify-center h-[200px] w-[450px]">
-          <Image width={450} height={200} src="/assets/png/portfolio.png" alt="frame" />
+          <Image width={450} height={200} src="./assets/png/portfolio.png" alt="frame" />
         </div>
         <div className="flex flex-col text-lg">
           <p className="text-2xl text-green-300">Portfolio Website</p>
@@ -204,13 +204,13 @@ export default function NavBar() {
         </div>
         <div>
           <p>Primary</p>
-          <a href="mailto:pratikchoudharij@gmail.com"><Image width={50} height={50} alt="img" src="/assets/png/mailicon.png" /></a>
+          <a href="mailto:pratikchoudharij@gmail.com"><Image width={50} height={50} alt="img" src="./assets/png/mailicon.png" /></a>
         </div>
         <div>
           <p>Social</p>
           <div className="flex">
-          <a href="https://www.linkedin.com/in/pratik-choudhari-073412295/" target="_blank"><Image width={50} height={50} alt="img" src="/assets/svg/linkedin.svg" /></a>
-          <a href="https://github.com/Pratikc27" target="_blank" className="mt-2.5 px-4"><Image width={50} height={50} alt="img" src="/assets/png/github.png" /></a>
+          <a href="https://www.linkedin.com/in/pratik-choudhari-073412295/" target="_blank"><Image width={50} height={50} alt="img" src="./assets/svg/linkedin.svg" /></a>
+          <a href="https://github.com/Pratikc27" target="_blank" className="mt-2.5 px-4"><Image width={50} height={50} alt="img" src="./assets/png/github.png" /></a>
           </div>
         </div>
 
