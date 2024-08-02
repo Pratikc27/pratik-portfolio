@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link";
+import Image from "next/image";
 import Images from "../public/assets/svg/men.svg";
 import Images1 from "../public/assets/svg/men1.svg";
 
@@ -35,7 +36,7 @@ export default function NavBar() {
         <div className="flex flex-col text-lg">
           <div className="py-4">{`<h2>`}</div>
           <div className="text-3xl">
-            Hi, I'm <span className="text-orange-300">Pratik Choudhari</span>
+            Hi, I&apos;m <span className="text-orange-300">Pratik Choudhari</span>
           </div>
           <div className="text-3xl">{`I Tell Stories Through <code/>`}</div>
           <div className="py-4">{`</h2>`}</div>
@@ -72,7 +73,7 @@ export default function NavBar() {
           </div>
         </div>
         <div className="flex items-center justify-center h-[450px] w-[650px]">
-          <img src="/assets/svg/men.svg" className="h-full w-full"/>
+          <Images />
         </div>
       </div>
       <div id="about" className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-24 mt-16">
@@ -124,13 +125,13 @@ export default function NavBar() {
 
       <div id="experience" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
         <div>
-          <p className="text-3xl">Where I've Worked</p>
+          <p className="text-3xl">Where I&apos;ve Worked</p>
         </div>
 
         <div className="mt-4">
           <p className="text-xl">
             <span>MERN-Stack Developer</span>
-            <a href="https://www.truscholar.io/" alt="" target="_blank">
+            <a href="https://www.truscholar.io/" target="_blank">
               <span className="text-green-300">{"    "}@TruScholar</span>
             </a>
           </p>
@@ -139,8 +140,8 @@ export default function NavBar() {
           <ul className="list-disc list-inside">
             <li className="mt-2">
               I have acquired industry experience by actively engaging in React
-              and Node.js coding, effectively enhancing the platform's
-              functionality. I've successfully rectified multiple bugs,
+              and Node.js coding, effectively enhancing the platform&apos;s
+              functionality. I&apos;ve successfully rectified multiple bugs,
               contributing to a smoother operation of the platform.
             </li>
             <li>
@@ -164,7 +165,7 @@ export default function NavBar() {
               experience.
             </li>
             <li>
-              To enhance performance, I'm implementing pagination on tables to
+              To enhance performance, I&apos;m implementing pagination on tables to
               minimize loading times and optimize user experience.
             </li>
             <li>
@@ -186,7 +187,7 @@ export default function NavBar() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12 py-10">
         <div className="items-center justify-center h-[200px] w-[450px]">
-          <img src="assets/png/portfolio.png"  className="h-full w-full " alt="frame" />
+          <Image width={450} height={200} src="/assets/png/portfolio.png" alt="frame" />
         </div>
         <div className="flex flex-col text-lg">
           <p className="text-2xl text-green-300">Portfolio Website</p>
@@ -203,11 +204,14 @@ export default function NavBar() {
         </div>
         <div>
           <p>Primary</p>
-          <a href="mailto:pratikchoudharij@gmail.com"><img src="/assets/png/mailicon.png" /></a>
+          <a href="mailto:pratikchoudharij@gmail.com"><Image width={50} height={50} alt="img" src="/assets/png/mailicon.png" /></a>
         </div>
         <div>
           <p>Social</p>
-          <a href="https://www.linkedin.com/in/pratik-choudhari-073412295/" target="_blank"><img src="/assets/svg/linkedin.svg" /></a>
+          <div className="flex">
+          <a href="https://www.linkedin.com/in/pratik-choudhari-073412295/" target="_blank"><Image width={50} height={50} alt="img" src="/assets/svg/linkedin.svg" /></a>
+          <a href="https://github.com/Pratikc27" target="_blank" className="mt-2.5 px-4"><Image width={50} height={50} alt="img" src="/assets/png/github.png" /></a>
+          </div>
         </div>
 
         <div className="mt-4">
