@@ -345,7 +345,7 @@ export default function NavBar() {
                 width={50}
                 height={50}
                 alt="github"
-                src=".next/png/github.png"
+                src="./png/github.png"
               />
             </a>
           </div>
