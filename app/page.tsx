@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -8,35 +8,98 @@ import Images1 from "../public/assets/svg/men1.svg";
 export default function NavBar() {
   return (
     <div className="bg-slate-700 text-white">
-      <nav className="p-8">
-        <div className="container mx-auto flex justify-between">
+      <nav className="p-6 mx-auto rounded-xl shadow-md">
+        <div className="md:hidden">
           <div className="text-orange-300 text-4xl">
-            <h1>{`<Pratik Choudhari />`}</h1>
+            <h1>{`<Pratik />`}</h1>
           </div>
-          <div className="text-white flex">
-            <Link href="#home">
-              <p className="px-4 py-2 hover:bg-gray-700 rounded">Home</p>
-            </Link>
-            <Link href="#about">
-              <p className="px-4 py-2 hover:bg-gray-700 rounded">About</p>
-            </Link>
-            <Link href="#experience">
-              <p className="px-4 py-2 hover:bg-gray-700 rounded">Experience</p>
-            </Link>
-            <Link href="#project">
-              <p className="px-4 py-2 hover:bg-gray-700 rounded">Projects</p>
-            </Link>
-            <Link href="#contact">
-              <p className="px-4 py-2 hover:bg-gray-700 rounded">Contact</p>
-            </Link>
+          <ul className="flex flex-col space-y-4">
+            <li>
+              <a
+                href="#home"
+                className="block px-4 py-2 rounded-md hover:bg-green-300"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className="block px-4 py-2 rounded-md hover:bg-green-300"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#experience"
+                className="block px-4 py-2 rounded-md hover:bg-green-300"
+              >
+                Experience
+              </a>
+            </li>
+            <li>
+              <a
+                href="#project"
+                className="block px-4 py-2 rounded-md hover:bg-green-300"
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="block px-4 py-2 rounded-md hover:bg-green-300"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="container mx-auto hidden md:block">
+          <div className="flex justify-between ">
+            <div className="text-orange-300 text-4xl">
+              <h1>{`<Pratik Choudhari />`}</h1>
+            </div>
+            <div className="text-white flex">
+              <Link href="#home">
+                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                  Home
+                </p>
+              </Link>
+              <Link href="#about">
+                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                  About
+                </p>
+              </Link>
+              <Link href="#experience">
+                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                  Experience
+                </p>
+              </Link>
+              <Link href="#project">
+                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                  Projects
+                </p>
+              </Link>
+              <Link href="#contact">
+                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                  Contact
+                </p>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
-      <div id="home" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 mt-8">
+      <div
+        id="home"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12 mt-8"
+      >
         <div className="flex flex-col text-lg">
           <div className="py-4">{`<h2>`}</div>
           <div className="text-3xl">
-            Hi, I&apos;m <span className="text-orange-300">Pratik Choudhari</span>
+            Hi, I&apos;m{" "}
+            <span className="text-orange-300">Pratik Choudhari</span>
           </div>
           <div className="text-3xl">{`I Tell Stories Through <code/>`}</div>
           <div className="py-4">{`</h2>`}</div>
@@ -46,13 +109,12 @@ export default function NavBar() {
           </div>
           <div>
             <p>
-              As a Software Developer with over 3.4 years of industry
-              experience, I specialize in creating innovative solutions on
-              various platforms.
+              As a MERN Stack Developer with over 1 year of experience, I
+              specialize in developing dynamic and responsive applications.
             </p>
             <p>
-              My passion for technology and engineering drives me to constantly
-              explore and implement cutting-edge developments in the field.
+              My enthusiasm for technology and engineering motivates me to
+              continuously learn and apply the latest advancements in the field.
             </p>
           </div>
           <div className="py-2">{`</p>`}</div>
@@ -72,20 +134,23 @@ export default function NavBar() {
             </a>
           </div>
         </div>
-        <div className="flex items-center justify-center h-[450px] w-[650px]">
+        <div className="hidden md:block items-center justify-center h-[450px] w-[650px]">
           <Images />
         </div>
       </div>
-      <div id="about" className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-24 mt-16">
+      <div
+        id="about"
+        className="text-3xl font-bold text-orange-300 grid grid-cols-1 md:grid-cols-2 gap-4 px-12 mt-8"
+      >
         <span>My Journey</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-24 py-10">
-        <div className="flex items-center justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="hidden md:block items-center justify-center">
           <Images1 />
         </div>
-        <div className="flex flex-col text-lg">
-          <span>
+
+        <div className="flex flex-col">
             <p className="py-2">
               Hello! My name is Pratik Choudhari, and I am currently working at
               TruScholar as a MERN-Stack Developer since June 2023.
@@ -119,13 +184,15 @@ export default function NavBar() {
               <li>JavaScript</li>
               <li>React.js</li>
             </ul>
-          </span>
         </div>
       </div>
 
-      <div id="experience" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
+      <div
+        id="experience"
+        className="grid grid-cols-1 md:grid-cols-1 gap-4 px-12"
+      >
         <div>
-          <p className="text-3xl">Where I&apos;ve Worked</p>
+          <p className="text-3xl text-orange-300">Where I&apos;ve Worked</p>
         </div>
 
         <div className="mt-4">
@@ -165,8 +232,8 @@ export default function NavBar() {
               experience.
             </li>
             <li>
-              To enhance performance, I&apos;m implementing pagination on tables to
-              minimize loading times and optimize user experience.
+              To enhance performance, I&apos;m implementing pagination on tables
+              to minimize loading times and optimize user experience.
             </li>
             <li>
               Setting up Redux Toolkit in a real-time project is a smart move
@@ -177,47 +244,116 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
-
-      </div>
-      
-      <div id="project" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
-        <div>
-          <p className="text-3xl">Some of My Personal Projects</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12 py-10">
-        <div className="items-center justify-center h-[200px] w-[450px]">
-          <Image width={450} height={200} src="./assets/png/portfolio.png" alt="frame" />
-        </div>
-        <div className="flex flex-col text-lg">
-          <p className="text-2xl text-green-300">Portfolio Website</p>
-          <p className="text-xs py-1">Nextjs + Tailwindcss</p>
-          <p className="text-sm py-1">A simple portfolio website built using Angular and hosted on the internet using Firebase. The font, colours and overall design took me 3 design iterations and almost a month to finalize which was more than the actual time I took to fully develop and deploy it.</p>
-        </div>
       </div>
 
+      <div
+        id="project"
+        className="grid grid-cols-1 md:grid-cols-1 gap-4 px-12 py-10"
+      >
+        <div>
+          <p className="text-3xl text-orange-300">Some of My Personal Projects</p>
         </div>
 
-        <div id="contact" className="grid grid-cols-1 md:grid-cols-1 gap-4 px-24 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+          <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
+            <Image width={650} height={450} src="../public/assets/png/cicd.png" alt="" />
+          </div>
+          <div className="md:hidden justify-center h-[10rem] w-[15rem] ">
+            <Image width={650} height={450} src="../public/assets/png/cicd.png" alt="" />
+          </div>
+          <div className="flex flex-col text-lg">
+            <p className="text-2xl text-green-300">CI/CD Pipeline</p>
+            <p className="text-xs py-1">Github Actions </p>
+            <p className="text-sm py-1">
+              By implementing this CI/CD pipeline, I have demonstrated my
+              ability to automate the deployment process, ensuring that code
+              changes are continuously integrated and deployed to production
+              with minimal manual intervention. This project highlights my
+              skills in modern development practices.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+          <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
+            <Image
+              width={650}
+              height={450}
+              src="../public/assets/png/portfolio.png"
+              alt=""
+            />
+          </div>
+          <div className="md:hidden justify-center h-[10rem] w-[15rem] ">
+            <Image
+              width={650}
+              height={450}
+              src="../public/assets/png/portfolio.png"
+              alt=""
+            />
+          </div>
+          <div className="flex flex-col text-lg">
+            <p className="text-2xl text-green-300">Portfolio Website</p>
+            <p className="text-xs py-1">Nextjs + Tailwindcss</p>
+            <p className="text-sm py-1">
+              A simple portfolio website built using Angular and hosted on the
+              internet using Firebase. The font, colours and overall design took
+              me 3 design iterations and almost a month to finalize which was
+              more than the actual time I took to fully develop and deploy it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="contact"
+        className="grid grid-cols-1 md:grid-cols-1 gap-4 px-12 py-10"
+      >
         <div>
-          <p className="text-3xl">Contact Me</p>
+          <p className="text-3xl text-orange-300">Contact Me</p>
         </div>
         <div>
           <p>Primary</p>
-          <a href="mailto:pratikchoudharij@gmail.com"><Image width={50} height={50} alt="img" src="./assets/png/mailicon.png" /></a>
+          <a href="mailto:pratikchoudharij@gmail.com">
+            <Image
+              width={50}
+              height={50}
+              alt="mail"
+              src="../public/assets/png/mailicon.png"
+            />
+          </a>
         </div>
         <div>
           <p>Social</p>
           <div className="flex">
-          <a href="https://www.linkedin.com/in/pratik-choudhari-073412295/" target="_blank"><Image width={50} height={50} alt="img" src="./assets/svg/linkedin.svg" /></a>
-          <a href="https://github.com/Pratikc27" target="_blank" className="mt-2.5 px-4"><Image width={50} height={50} alt="img" src="./assets/png/github.png" /></a>
+            <a
+              href="https://www.linkedin.com/in/pratik-choudhari-073412295/"
+              target="_blank"
+            >
+              <Image
+                width={50}
+                height={50}
+                alt="linkedin"
+                src="/assets/svg/linkedin.svg"
+              />
+            </a>
+            <a
+              href="https://github.com/Pratikc27"
+              target="_blank"
+              className="mt-2.5 px-4"
+            >
+              <Image
+                width={50}
+                height={50}
+                alt="github"
+                src="../public/assets/png/github.png"
+              />
+            </a>
           </div>
         </div>
 
         <div className="mt-4">
-         <p></p>
+          <p></p>
         </div>
-
       </div>
     </div>
   );
