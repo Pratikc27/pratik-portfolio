@@ -145,7 +145,7 @@ export default function NavBar() {
         <span>My Journey</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12">
         <div className="hidden md:block items-center justify-center">
           <Images1 />
         </div>
@@ -256,10 +256,10 @@ export default function NavBar() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
-            <Image width={650} height={450} src="../public/assets/png/cicd.png" alt="" />
+            <Image width={650} height={450} src="./png/cicd.png" alt="" />
           </div>
           <div className="md:hidden justify-center h-[10rem] w-[15rem] ">
-            <Image width={650} height={450} src="../public/assets/png/cicd.png" alt="" />
+            <Image width={650} height={450} src="./png/cicd.png" alt="" />
           </div>
           <div className="flex flex-col text-lg">
             <p className="text-2xl text-green-300">CI/CD Pipeline</p>
@@ -279,7 +279,7 @@ export default function NavBar() {
             <Image
               width={650}
               height={450}
-              src="../public/assets/png/portfolio.png"
+              src="./png/portfolio.png"
               alt=""
             />
           </div>
@@ -287,7 +287,7 @@ export default function NavBar() {
             <Image
               width={650}
               height={450}
-              src="../public/assets/png/portfolio.png"
+              src="./png/portfolio.png"
               alt=""
             />
           </div>
@@ -318,7 +318,7 @@ export default function NavBar() {
               width={50}
               height={50}
               alt="mail"
-              src="../public/assets/png/mailicon.png"
+              src="./png/mailicon.png"
             />
           </a>
         </div>
@@ -333,7 +333,7 @@ export default function NavBar() {
                 width={50}
                 height={50}
                 alt="linkedin"
-                src="/assets/svg/linkedin.svg"
+                src="./assets/svg/linkedin.svg"
               />
             </a>
             <a
@@ -345,7 +345,7 @@ export default function NavBar() {
                 width={50}
                 height={50}
                 alt="github"
-                src="../public/assets/png/github.png"
+                src=".next/png/github.png"
               />
             </a>
           </div>
@@ -354,6 +354,9 @@ export default function NavBar() {
         <div className="mt-4">
           <p></p>
         </div>
+      </div>
+      <div className="text-xs text-center p-12">
+        <p>Created and Developed by Pratik Choudhari @ 2024</p>
       </div>
     </div>
   );
