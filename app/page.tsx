@@ -151,51 +151,49 @@ export default function NavBar() {
         </div>
 
         <div className="flex flex-col">
-            <p className="py-2">
-              Hello! My name is Pratik Choudhari, and I am currently working at
-              TruScholar as a MERN-Stack Developer since June 2023.
-            </p>
-            <p className="py-2">
-              My journey to becoming a software developer began in May 2022,
-              with the support of the SunBeam Institute of Information
-              Technology in Pune. At that time, I only had a basic knowledge of
-              programming, but I seized the opportunity to dive deeper during
-              the PG-DAC course. This decision marked the start of an incredible
-              learning experience.
-            </p>
-            <p className="py-2">
-              I extensively utilized the resources provided by C-DAC, which
-              helped me build a solid foundation in software development. Over
-              time, I have honed my skills and now specialize in React, Next.js,
-              Node.js, and MongoDB. I am proud to say that I can independently
-              create software applications.
-            </p>
-            <p>
-              Post-Graduation: Deploma in Advance Computing(PD-DAC),
-              SunBeam-Pune
-            </p>
-            <p>Email: pratikchoudharij@gmail.com</p>
-            <p>Location: Maharashtra,</p>
-            <p>India </p>
-            <p className="py-2">Technical Skills:</p>
-            <ul className="list-disc pl-5 text-green-400">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>React.js</li>
-            </ul>
+          <p className="py-2">
+            Hello! My name is Pratik Choudhari, and I am currently working at
+            TruScholar as a MERN-Stack Developer since June 2023.
+          </p>
+          <p className="py-2">
+            My journey to becoming a software developer began in May 2022, with
+            the support of the SunBeam Institute of Information Technology in
+            Pune. At that time, I only had a basic knowledge of programming, but
+            I seized the opportunity to dive deeper during the PG-DAC course.
+            This decision marked the start of an incredible learning experience.
+          </p>
+          <p className="py-2">
+            I extensively utilized the resources provided by C-DAC, which helped
+            me build a solid foundation in software development. Over time, I
+            have honed my skills and now specialize in React, Next.js, Node.js,
+            and MongoDB. I am proud to say that I can independently create
+            software applications.
+          </p>
+          <p>
+            Post-Graduation: Deploma in Advance Computing(PD-DAC), SunBeam-Pune
+          </p>
+          <p>Email: pratikchoudharij@gmail.com</p>
+          <p>Location: Maharashtra,</p>
+          <p>India </p>
+          <p className="py-2">Technical Skills:</p>
+          <ul className="list-disc pl-5 text-green-400">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+          </ul>
         </div>
       </div>
 
       <div
         id="experience"
-        className="grid grid-cols-1 md:grid-cols-1 gap-4 px-12"
+        className="grid grid-cols-1 md:grid-cols-1 gap-4 px-12 pt-6"
       >
         <div>
           <p className="text-3xl text-orange-300">Where I&apos;ve Worked</p>
         </div>
 
-        <div className="mt-4">
+        <div>
           <p className="text-xl">
             <span>MERN-Stack Developer</span>
             <a href="https://www.truscholar.io/" target="_blank">
@@ -251,17 +249,16 @@ export default function NavBar() {
         className="grid grid-cols-1 md:grid-cols-1 gap-4 px-12 py-10"
       >
         <div>
-          <p className="text-3xl text-orange-300">Some of My Personal Projects</p>
+          <p className="text-3xl text-orange-300">
+            Some of My Personal Projects
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
             <Image width={650} height={450} src="./png/cicd.png" alt="" />
           </div>
-          <div className="md:hidden justify-center h-[10rem] w-[15rem] ">
-            <Image width={650} height={450} src="./png/cicd.png" alt="" />
-          </div>
-          <div className="flex flex-col text-lg">
+          <div className="hidden md:block flex-col text-lg">
             <p className="text-2xl text-green-300">CI/CD Pipeline</p>
             <p className="text-xs py-1">Github Actions </p>
             <p className="text-sm py-1">
@@ -272,26 +269,31 @@ export default function NavBar() {
               skills in modern development practices.
             </p>
           </div>
+
+          <div className="md:hidden">
+            <div className="flex flex-col text-lg">
+              <p className="text-2xl text-green-300">CI/CD Pipeline</p>
+              <p className="text-xs py-1">Github Actions </p>
+              <p className="text-sm py-1">
+                By implementing this CI/CD pipeline, I have demonstrated my
+                ability to automate the deployment process, ensuring that code
+                changes are continuously integrated and deployed to production
+                with minimal manual intervention. This project highlights my
+                skills in modern development practices.
+              </p>
+            </div>
+            <div className="justify-center h-[10rem] w-[15rem] ">
+              <Image width={650} height={450} src="./png/cicd.png" alt="" />
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
-            <Image
-              width={650}
-              height={450}
-              src="./png/portfolio.png"
-              alt=""
-            />
+            <Image width={650} height={450} src="./png/portfolio.png" alt="" />
           </div>
-          <div className="md:hidden justify-center h-[10rem] w-[15rem] ">
-            <Image
-              width={650}
-              height={450}
-              src="./png/portfolio.png"
-              alt=""
-            />
-          </div>
-          <div className="flex flex-col text-lg">
+
+          <div className="hidden md:block flex-col text-lg">
             <p className="text-2xl text-green-300">Portfolio Website</p>
             <p className="text-xs py-1">Nextjs + Tailwindcss</p>
             <p className="text-sm py-1">
@@ -300,6 +302,23 @@ export default function NavBar() {
               me 3 design iterations and almost a month to finalize which was
               more than the actual time I took to fully develop and deploy it.
             </p>
+          </div>
+
+          <div className="md:hidden">
+            <div className="flex flex-col text-lg">
+              <p className="text-2xl text-green-300">Portfolio Website</p>
+              <p className="text-xs py-1">Nextjs + Tailwindcss</p>
+              <p className="text-sm py-1">
+                A simple portfolio website built using Angular and hosted on the
+                internet using Firebase. The font, colours and overall design
+                took me 3 design iterations and almost a month to finalize which
+                was more than the actual time I took to fully develop and deploy
+                it.
+              </p>
+            </div>
+            <div className="justify-center h-[10rem] w-[15rem] ">
+              <Image width={650} height={450} src="./png/portfolio.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -314,12 +333,7 @@ export default function NavBar() {
         <div>
           <p>Primary</p>
           <a href="mailto:pratikchoudharij@gmail.com">
-            <Image
-              width={50}
-              height={50}
-              alt="mail"
-              src="./png/mailicon.png"
-            />
+            <Image width={50} height={50} alt="mail" src="./png/mailicon.png" />
           </a>
         </div>
         <div>
