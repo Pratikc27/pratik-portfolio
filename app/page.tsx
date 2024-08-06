@@ -1,60 +1,84 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Images from "../public/assets/svg/men.svg";
 import Images1 from "../public/assets/svg/men1.svg";
 
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen((prop) => !prop);
+  };
   return (
     <div className="bg-slate-700 text-white">
-      <nav className="p-6 mx-auto rounded-xl shadow-md">
-        <div className="md:hidden">
+      <nav className="p-6 fixed top-0 left-0 w-full bg-slate-700 z-50 mx-auto shadow-md">
+        <div className="md:hidden flex w-full grid-cols-2 justify-between">
           <div className="text-orange-300 text-4xl">
             <h1>{`<Pratik />`}</h1>
           </div>
-          <ul className="flex flex-col space-y-4">
-            <li>
-              <a
-                href="#home"
-                className="block px-4 py-2 rounded-md hover:bg-green-300"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                className="block px-4 py-2 rounded-md hover:bg-green-300"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#experience"
-                className="block px-4 py-2 rounded-md hover:bg-green-300"
-              >
-                Experience
-              </a>
-            </li>
-            <li>
-              <a
-                href="#project"
-                className="block px-4 py-2 rounded-md hover:bg-green-300"
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="block px-4 py-2 rounded-md hover:bg-green-300"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+          <div>
+            <div className="md:hidden">
+              <button onClick={toggleDropdown}>
+                <Image
+                  width={650}
+                  height={450}
+                  className="h-8 w-8"
+                  src="./assets/svg/menu.svg"
+                  alt="menu"
+                />
+              </button>
+            </div>
+            <div
+              className={`md:flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 ${
+                isOpen ? "block" : "hidden"
+              }`}
+            >
+              <ul className="flex flex-col">
+                <li className="block py-1 rounded-md hover:text-orange-300">
+                  <a
+                    href="#home"
+                    >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    className="block py-1 rounded-md hover:bg-green-300"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#experience"
+                    className="block py-1 rounded-md hover:bg-green-300"
+                  >
+                    Experience
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#project"
+                    className="block py-1 rounded-md hover:bg-green-300"
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="block py-1 rounded-md hover:bg-green-300"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div className="container mx-auto hidden md:block">
           <div className="flex justify-between ">
@@ -63,27 +87,27 @@ export default function NavBar() {
             </div>
             <div className="text-white flex">
               <Link href="#home">
-                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                <p className="px-4 py-2 rounded block hover:text-orange-300">
                   Home
                 </p>
               </Link>
               <Link href="#about">
-                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                <p className="px-4 py-2 rounded block hover:text-orange-300">
                   About
                 </p>
               </Link>
               <Link href="#experience">
-                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                <p className="px-4 py-2 rounded block hover:text-orange-300">
                   Experience
                 </p>
               </Link>
               <Link href="#project">
-                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                <p className="px-4 py-2 rounded block hover:text-orange-300">
                   Projects
                 </p>
               </Link>
               <Link href="#contact">
-                <p className="px-4 py-2 rounded block hover:bg-green-500">
+                <p className="px-4 py-2 rounded block hover:text-orange-300">
                   Contact
                 </p>
               </Link>
@@ -93,7 +117,7 @@ export default function NavBar() {
       </nav>
       <div
         id="home"
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 px-12 mt-8"
+        className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 px-12 pt-24 md:pt-32"
       >
         <div className="flex flex-col text-lg">
           <div className="py-4">{`<h2>`}</div>
@@ -134,7 +158,7 @@ export default function NavBar() {
             </a>
           </div>
         </div>
-        <div className="hidden md:block items-center justify-center h-[450px] w-[650px]">
+        <div className="hidden md:block items-center justify-center h-[450px] w-[650px] ">
           <Images />
         </div>
       </div>
@@ -254,7 +278,7 @@ export default function NavBar() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 pt-4">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
             <Image width={650} height={450} src="./png/cicd.png" alt="" />
           </div>
@@ -288,7 +312,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 py-10">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
             <Image width={650} height={450} src="./png/portfolio.png" alt="" />
           </div>
