@@ -38,11 +38,7 @@ export default function NavBar() {
             >
               <ul className="flex flex-col">
                 <li className="block py-1 rounded-md hover:text-orange-300">
-                  <a
-                    href="#home"
-                    >
-                    Home
-                  </a>
+                  <a href="#home">Home</a>
                 </li>
                 <li>
                   <a
@@ -205,6 +201,10 @@ export default function NavBar() {
             <li>CSS</li>
             <li>JavaScript</li>
             <li>React.js</li>
+            <li>NodeJS</li>
+            <li>Spring Boot</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
           </ul>
         </div>
       </div>
@@ -342,6 +342,46 @@ export default function NavBar() {
             </div>
             <div className="justify-center h-[10rem] w-[15rem] ">
               <Image width={650} height={450} src="./png/portfolio.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 pt-4">
+          <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
+            <Image width={650} height={450} src="./png/hms.png" alt="" />
+          </div>
+          <div className="hidden md:block flex-col text-lg">
+            <p className="text-2xl text-green-300">
+              Hospital Management System
+            </p>
+            <p className="text-xs py-1">ReactJS + java(Spring Boot) + MySQL </p>
+            <p className="text-sm py-1">
+              Hospital Management is developed using java Spring Boot, React JS
+              & MySQL by using this application, Patients can take appointments
+              and doctors can handle patient appointments which will be assigned
+              to them by the Admin and Patients can register and take
+              appointments at any time. This technology mainly have role of
+              Admin, Doctor, Receptionist and Patients.
+            </p>
+          </div>
+
+          <div className="md:hidden">
+            <div className="flex flex-col text-lg">
+              <p className="text-2xl text-green-300">
+                Hospital Management System
+              </p>
+              <p className="text-xs py-1">ReactJS + java(Spring Boot) + MySQL </p>
+              <p className="text-sm py-1">
+                Hospital Management is developed using java Spring Boot, React
+                JS & MySQL by using this application, Patients can take
+                appointments and doctors can handle patient appointments which
+                will be assigned to them by the Admin and Patients can register
+                and take appointments at any time. This technology mainly have
+                role of Admin, Doctor, Receptionist and Patients.
+              </p>
+            </div>
+            <div className="justify-center h-[10rem] w-[15rem] ">
+              <Image width={650} height={450} src="./png/hms.png" alt="" />
             </div>
           </div>
         </div>
