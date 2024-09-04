@@ -140,7 +140,7 @@ export default function NavBar() {
           <div className="py-2">{`</p>`}</div>
           <div className="py-6">
             <a
-              href="https://drive.google.com/uc?export=download&id=1lpPDp5gw6vWzIwi8kmEhczjQ-z5JxWH0"
+              href="https://drive.google.com/uc?export=download&id=1puOL9OTYez8mcrh68sROaiCpnI-PGQ1B"
               className="bg-slate-700 text-green-500 font-medium py-2 px-4 rounded inline-flex items-center border-2 border-green-400"
             >
               <span>Resume</span>
