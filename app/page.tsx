@@ -280,7 +280,49 @@ export default function NavBar() {
 
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 pt-4">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
-            <Image width={650} height={450} src="./png/cicd.png" alt="" />
+          <a
+              href="https://resilient-torte-39dbf9.netlify.app/"
+              target="_blank"
+              className="mt-2.5 px-4"
+            >
+            <Image width={650} height={450} src="/png/furniture.png" alt="" />
+            </a>
+          </div>
+          <div className="hidden md:block flex-col text-lg">
+            <p className="text-2xl text-green-300">Blockchain-Powered Furniture Shop</p>
+            <p className="text-xs py-1">Ether.js + solidity + polygon</p>
+            <p className="text-sm py-1">
+            Built a decentralized application (dApp) using ReactJS for the frontend, 
+            Solidity for smart contracts, Hardhat for development and deployment, 
+            Ether.js for blockchain interaction, and Polygon for the blockchain network.
+            </p>
+          </div>
+
+          <div className="md:hidden">
+            <div className="flex flex-col text-lg">
+            <p className="text-2xl text-green-300">Blockchain-Powered Furniture Shop</p>
+              <p className="text-xs py-1">Ether.js + solidity + polygon</p>
+              <p className="text-sm py-1">
+              Built a decentralized application (dApp) using ReactJS for the frontend, 
+            Solidity for smart contracts, Hardhat for development and deployment, 
+            Ether.js for blockchain interaction, and Polygon for the blockchain network.
+              </p>
+            </div>
+            <div className="justify-center h-[10rem] w-[15rem] ">
+            <a
+              href="https://resilient-torte-39dbf9.netlify.app/"
+              target="_blank"
+              className="mt-2.5 px-4"
+              >
+              <Image width={650} height={450} src="/png/furniture.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 pt-4">
+          <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
+            <Image width={650} height={450} src="/png/cicd.png" alt="" />
           </div>
           <div className="hidden md:block flex-col text-lg">
             <p className="text-2xl text-green-300">CI/CD Pipeline</p>
@@ -307,14 +349,14 @@ export default function NavBar() {
               </p>
             </div>
             <div className="justify-center h-[10rem] w-[15rem] ">
-              <Image width={650} height={450} src="./png/cicd.png" alt="" />
+              <Image width={650} height={450} src="/png/cicd.png" alt="" />
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 py-10">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
-            <Image width={650} height={450} src="./png/portfolio.png" alt="" />
+            <Image width={650} height={450} src="/png/portfolio.png" alt="" />
           </div>
 
           <div className="hidden md:block flex-col text-lg">
@@ -341,14 +383,14 @@ export default function NavBar() {
               </p>
             </div>
             <div className="justify-center h-[10rem] w-[15rem] ">
-              <Image width={650} height={450} src="./png/portfolio.png" alt="" />
+              <Image width={650} height={450} src="/png/portfolio.png" alt="" />
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 pt-4">
           <div className="hidden md:block items-center justify-center h-[15rem] w-[30rem]">
-            <Image width={650} height={450} src="./png/hms.png" alt="" />
+            <Image width={650} height={450} src="/png/hms.png" alt="" />
           </div>
           <div className="hidden md:block flex-col text-lg">
             <p className="text-2xl text-green-300">
@@ -381,7 +423,7 @@ export default function NavBar() {
               </p>
             </div>
             <div className="justify-center h-[10rem] w-[15rem] ">
-              <Image width={650} height={450} src="./png/hms.png" alt="" />
+              <Image width={650} height={450} src="/png/hms.png" alt="" />
             </div>
           </div>
         </div>
@@ -397,7 +439,7 @@ export default function NavBar() {
         <div>
           <p>Primary</p>
           <a href="mailto:pratikchoudharij@gmail.com">
-            <Image width={50} height={50} alt="mail" src="./png/mailicon.png" />
+            <Image width={50} height={50} alt="mail" src="/png/mailicon.png" />
           </a>
         </div>
         <div>
@@ -423,7 +465,7 @@ export default function NavBar() {
                 width={50}
                 height={50}
                 alt="github"
-                src="./png/github.png"
+                src="/png/github.png"
               />
             </a>
           </div>
