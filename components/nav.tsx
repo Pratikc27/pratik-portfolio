@@ -129,7 +129,7 @@ export function Nav() {
               rel="noopener noreferrer"
               className="rounded-md border border-border-strong px-3 py-2 text-sm text-text transition-colors hover:border-accent hover:text-accent"
             >
-              Résumé
+              Resume
             </a>
           </li>
         </ul>
@@ -184,7 +184,7 @@ export function Nav() {
               onClick={() => setIsOpen(false)}
               className="block py-3 text-base text-accent"
             >
-              Résumé
+              Resume
             </a>
           </li>
         </ul>

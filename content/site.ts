@@ -59,7 +59,7 @@ export const profile = {
    * TODO: replace with "/pratik-choudhari-resume.pdf" once the file is added.
    */
   resumeUrl:
-    "https://drive.google.com/uc?export=download&id=1jE2ygQOZS1oL4BMi3v2pHty74nrL-5Kt",
+    "https://drive.google.com/uc?export=download&id=1EpzP-JzlCi_IS68YGo_1O3k27P2lN9Ik",
   availableForWork: true,
 } as const;
 
