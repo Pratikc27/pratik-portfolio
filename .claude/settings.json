@@ -11,7 +11,13 @@
       "Bash(timeout 600 npx --yes playwright@1.48.0 install chromium)",
       "Bash(node -e \"require\\('sharp'\\);console.log\\('sharp available'\\)\")",
       "Bash(python3 -c \"import PIL; print\\('PIL available', PIL.__version__\\)\")",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(git config *)",
+      "Bash(ssh -o StrictHostKeyChecking=accept-new -T git@github.com)",
+      "Read(//home/pratik2704/.ssh/**)",
+      "Bash(ssh-add -l)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)"
     ]
   }
 }
