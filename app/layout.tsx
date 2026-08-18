@@ -54,8 +54,8 @@ export const metadata: Metadata = {
         // Absolute rather than relative: the site is served from a basePath
         // (/pratik-portfolio), and social scrapers need the fully-qualified URL.
         url: `${SITE_URL}/png/portfolio.png`,
-        width: 1914,
-        height: 859,
+        width: 1882,
+        height: 814,
         alt: `${profile.name} — portfolio site`,
       },
     ],

@@ -316,8 +316,8 @@ export const projects: readonly Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "GitHub Actions"],
     image: {
       src: asset("/png/portfolio.png"),
-      width: 1914,
-      height: 859,
+      width: 1882,
+      height: 814,
       alt: "This portfolio site rendered on a dark background with the projects section in view",
     },
     liveUrl: SITE_URL,
