@@ -2,26 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  html {
+    /* Anchor links land below the fixed header instead of under it. */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  /* Honour the OS "reduce motion" setting everywhere, including smooth scroll. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-bg text-text antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  /* One visible focus style for the whole site, keyboard-only. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    @apply bg-accent/25 text-text;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-}
+@layer components {
+  /*
+   * Scroll reveal.
+   *
+   * Content is VISIBLE by default. The hidden starting state is applied only
+   * under html[data-js="on"], which the inline script in layout.tsx sets before
+   * first paint — so the animation is a pure enhancement and content is never
+   * hidden by a stylesheet that JS then has to undo. If scripting is off,
+   * blocked, or the attribute is never set, everything simply renders.
+   *
+   * Reveal's IntersectionObserver then adds data-visible to animate it in.
+   */
+  .reveal {
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  html[data-js="on"] .reveal:not([data-visible="true"]) {
+    opacity: 0;
+    transform: translateY(14px);
+    will-change: opacity, transform;
+  }
+
+  /* Never animate for reduced-motion users, and never hide content from them. */
+  @media (prefers-reduced-motion: reduce) {
+    html[data-js="on"] .reveal:not([data-visible="true"]) {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal {
+      transition: none;
+    }
+  }
+
+  /* Belt and braces: if scripting is unavailable, nothing is ever hidden. */
+  @media (scripting: none) {
+    html[data-js="on"] .reveal:not([data-visible="true"]) {
+      opacity: 1;
+      transform: none;
+    }
   }
 }

@@ -53,14 +53,11 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      # `static_site_generator: next` is deliberately NOT set — basePath and
+      # images.unoptimized are configured explicitly in next.config.mjs so that
+      # local production builds behave identically to CI.
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -73,6 +70,12 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Check images
+        run: node scripts/check-images.mjs
+      - name: Type check
+        run: ${{ steps.detect-package-manager.outputs.runner }} tsc --noEmit
+      - name: Lint
+        run: ${{ steps.detect-package-manager.outputs.runner }} next lint
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact

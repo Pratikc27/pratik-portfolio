@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git reset *)",
+      "WebFetch(domain:www.truscholar.io)",
+      "Bash(python3 -c ' *)",
+      "Bash(pkill -f 'next[ ]dev')",
+      "Bash(pkill -f 'next-server')",
+      "Bash(pkill -f 'next[-]server')",
+      "Bash(timeout 600 npx --yes playwright@1.48.0 install chromium)",
+      "Bash(node -e \"require\\('sharp'\\);console.log\\('sharp available'\\)\")",
+      "Bash(python3 -c \"import PIL; print\\('PIL available', PIL.__version__\\)\")",
+      "Bash(git mv *)"
+    ]
+  }
+}
